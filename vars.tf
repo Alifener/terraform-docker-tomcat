@@ -10,8 +10,8 @@ variable "ECS_AMIS" {
   }
 }
 
-#machine types
-variable "ec2_machine_type" {
+#instance types
+variable "ec2_instance_type" {
   default = "t2.micro"
 }
 
