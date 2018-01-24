@@ -2,13 +2,17 @@ This repository contains terraform codes to create AWS Resources (vpc, subnet, e
 
 AWS Region : eu-west-2 
 
+Create an S3 bucket and use the bucket name in tfstate.tf file (e.g. bucket = "umg-terraform-docker-bucket")
+
 Run Terraform Code to create the insfrastructure
 
-1. terraform plan -out out.terraform
+1.terraform init
 
-2. terraform apply out.terraform (you can re-run this command if ecs resource fails) 
+2.terraform plan -out out.terraform
 
-3. Check the output for ecr url and application endpoint url. 
+3.terraform apply out.terraform (you can re-run this command if ecs resource fails) 
+
+4.Check the output for ecr url and application endpoint url. 
 
 Create a Docker Image and push it to Amazon ECR
 
