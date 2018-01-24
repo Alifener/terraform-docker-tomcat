@@ -6,7 +6,7 @@ Run Terraform Code to create the insfrastructure
 
 1. terraform plan -out out.terraform
 
-2. terraform apply out.terraform (in ecs fail case just run this command again)
+2. terraform apply out.terraform (you can re-run this command if ecs resource fails) 
 
 3. Check the output for ecr url and application endpoint url. 
 
