@@ -5,7 +5,7 @@ resource "aws_ecs_cluster" "umg_cluster" {
 resource "aws_launch_configuration" "umg_launchconfig" {
   name_prefix          = "launchconfig_umg"
   image_id             = "${lookup(var.ECS_AMIS, var.AWS_REGION)}"
-  instance_type        = "${var.ec2_machine_type}"
+  instance_type        = "${var.ec2_instance_type}"
   key_name             = "${aws_key_pair.key.key_name}"
   iam_instance_profile = "${aws_iam_instance_profile.ecs_ec2_role.id}"
   security_groups      = ["${aws_security_group.sg_ecs_cluster.id}"]
